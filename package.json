@@ -22,8 +22,12 @@
   },
   "homepage": "https://github.com/ahtee/new-react-app#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^7.0.2",
-    "webpack": "^4.29.6"
+    "@babel/polyfill": "^7.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0"
   }
 }
