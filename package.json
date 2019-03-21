@@ -1,0 +1,29 @@
+{
+  "name": "new-react-app",
+  "version": "1.0.0",
+  "description": "Start developing your React application with a boilerplate to get started faster.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahtee/new-react-app.git"
+  },
+  "keywords": [
+    "react",
+    "babel",
+    "webpack"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahtee/new-react-app/issues"
+  },
+  "homepage": "https://github.com/ahtee/new-react-app#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^7.0.2",
+    "webpack": "^4.29.6"
+  }
+}

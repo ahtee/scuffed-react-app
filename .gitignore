@@ -1,0 +1,2 @@
+# Ignore node_modules from npm install / yarn install
+node_modules
