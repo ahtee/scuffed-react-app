@@ -1,2 +1,5 @@
 # Ignore node_modules from npm install / yarn install
 node_modules
+
+# Ignores package.json lockfile
+package-lock.json
