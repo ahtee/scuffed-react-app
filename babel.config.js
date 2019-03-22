@@ -3,6 +3,7 @@ const presets = [
     '@babel/env',
     '@babel/preset-react',
     'babel-plugin-styled-components',
+    'react-hot-loader/babel',
     {
       targets: {
         edge: '17',
