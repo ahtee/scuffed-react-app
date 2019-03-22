@@ -1,6 +1,8 @@
 const presets = [
   [
     '@babel/env',
+    '@babel/preset-react',
+    'babel-plugin-styled-components',
     {
       targets: {
         edge: '17',
