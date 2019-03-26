@@ -3,3 +3,5 @@
 :rocket: Start developing your React application with stress. :nail_care:
 
 ## ISC License
+
+See [LICENSE](./LICENSE)
