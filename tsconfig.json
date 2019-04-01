@@ -3,9 +3,13 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
     "module": "commonjs",
     "target": "es5",
     "jsx": "react",
     "allowJs": true
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
