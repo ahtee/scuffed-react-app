@@ -1,22 +1,30 @@
 const path = require('path');
 
 module.exports = {
-  devtool: 'inline-source-map',
+  mode: 'development',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname + '/dist'),
-    publicPath: '/',
-    filename: 'bundle.js',
+    path: __dirname + '/static',
+    filename: '[name].[chunkhash:8].js',
   },
-  devServer: {
-    contentBase: './build',
-  },
+  devtool: 'source-map',
   module: {
     rules: [
       {
+        enforce: 'pre',
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader'],
+        use: 'eslint-loader',
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env', 'react'],
+          },
+        },
       },
     ],
   },
