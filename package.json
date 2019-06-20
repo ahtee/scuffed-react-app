@@ -1,13 +1,15 @@
 {
   "name": "new-react-app",
+  "sideEffects": false,
   "version": "1.0.0",
-  "description": "Start developing your React application with stress.",
-  "main": "src/index.js",
+  "description": "create a new react application with stress.",
+  "main": "index.js",
+  "private": true,
   "scripts": {
-    "start": "webpack-dev-server",
-    "format": "prettier --write \"src/**/*.js\"",
-    "eslint-fix": "eslint --fix \"src/**/*.js\"",
-    "build": "rollup -c --environment INCLUDE_DEPS,BUILD:development"
+    "start": "webpack-dev-server --watch",
+    "test": "test",
+    "watch": "webpack --watch",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -15,35 +17,32 @@
   },
   "keywords": [
     "react",
-    "babel",
-    "webpack"
+    "webpack",
+    "typescript"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "ahtee",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ahtee/new-react-app/issues"
   },
   "homepage": "https://github.com/ahtee/new-react-app#readme",
-  "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
     "eslint": "^5.16.0",
-    "eslint-config-react": "^1.1.7",
-    "eslint-loader": "^2.1.2",
-    "eslint-plugin-react": "^7.13.0",
-    "gulp": "^4.0.2",
-    "gulp-cli": "^2.2.0",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-node-resolve": "^5.0.0",
-    "webpack": "^4.32.2",
-    "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.2.1"
+    "style-loader": "^0.23.1",
+    "ts-loader": "^6.0.3",
+    "typescript": "^3.5.2",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }

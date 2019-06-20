@@ -1,30 +1,34 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
-  output: {
-    path: __dirname + '/static',
-    filename: '[name].[chunkhash:8].js',
+  mode: 'production',
+  entry: {
+    app: './src/index.js',
   },
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
+    hot: true,
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].bundle.js',
+  },
   module: {
     rules: [
       {
-        enforce: 'pre',
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: 'eslint-loader',
+        use: 'babel-loader',
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx)$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env', 'react'],
-          },
-        },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },

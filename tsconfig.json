@@ -1,21 +1,13 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
     "module": "commonjs",
     "target": "es6",
     "jsx": "react",
     "allowJs": true
   },
-  "include": ["src/**/*"],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts",
-    "**/*.test.ts",
-    "**/*.spec.js",
-    "**/*.test.js"
-  ]
+  "include": ["./src/**/*"]
 }

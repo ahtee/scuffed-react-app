@@ -1,6 +1,8 @@
-import React, { memo } from 'react';
+import React, { PureComponent } from 'react';
 
-function App() {
-  return <div>Hello World</div>;
+class App extends PureComponent {
+  render() {
+    return <p>Hello World</p>;
+  }
 }
-export default memo(App);
+export default App;
