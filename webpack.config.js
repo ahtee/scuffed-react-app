@@ -1,20 +1,25 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  mode: 'production',
   entry: {
     app: './src/index.js',
   },
-  devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist',
-    hot: true,
+    compress: true,
+    port: 9000,
+    clientLogLevel: 'silent',
+    open: true,
+    stats: {
+      colors: true,
+    }
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js',
-    chunkFilename: '[name]-chunk.bundle.js',
+    filename: devMode ? '[name].bundle.js' : '[name]-[hash].bundle.js'
   },
   module: {
     rules: [
@@ -29,8 +34,17 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development'
+            }
+          },
+          'css-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.html$/,
@@ -40,19 +54,20 @@ module.exports = {
       }
     ],
   },
-  devServer: {
-    compress: true,
-    port: 9000,
-    clientLogLevel: 'silent',
-    open: true,
-    stats: {
-      colors: true,
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
     }
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      filename: './index.html'
+      filename: 'index.html'
+    }),
+    new MiniCssExtractPlugin({
+      filename: devMode ? '[name].css' : '[name].[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+      ignoreOrder: false, // Enable to remove warnings about conflicting order
     })
   ]
 };
