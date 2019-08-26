@@ -2,7 +2,7 @@
 
 > :rocket: Start developing your React application with stress. :nail_care:
 
-Boilerplate package for creating React apps with Redux built-in. :ship:
+Boilerplate package for creating React apps with Redux built-in. :ship: **npm@5.2.0** or later is required to use this project with `npx`.
 
 ## Goals
 
