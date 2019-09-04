@@ -1,6 +1,7 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import { useSpring, animated } from 'react-spring';
+import styled from 'styled-components';
+import AddTodo from '../containers/AddTodo';
+import TodoListContainer from '../containers/TodoListContainer';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -17,44 +18,22 @@ const Row = styled.div`
   justify-content: center;
 `;
 
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-const Emoji = styled.div`
-  font-size: 5rem;
-  animation: ${rotate} 10s linear infinite;
-`;
-
 const HeaderText = styled.h2`
   text-align: center;
   margin: 0px 30px;
 `;
 
 function Home() {
-  const props = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-    transform: 'translate3d(0px,0,0) scale(1) rotateX(0deg)',
-  });
   return (
     <Container>
       <Row>
-        <Emoji>
-          <animated.span style={props}>🚀</animated.span>
-        </Emoji>
         <HeaderText>
           Start developing your React application with <u>stress</u>.
         </HeaderText>
-        <Emoji>
-          <animated.span style={props}>✨</animated.span>
-        </Emoji>
+      </Row>
+      <Row>
+        <AddTodo />
+        <TodoListContainer />
       </Row>
     </Container>
   );

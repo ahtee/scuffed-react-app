@@ -15,8 +15,8 @@ Boilerplate package for creating React apps with Redux built-in. :ship: **npm@5.
 Create a React Boilerplate with Redux, all built-in and ready to go.
 
 - [x] React
-- [ ] Redux
-- [ ] TypeScript compatibility
+- [x] Redux
+- [x] TypeScript compatibility (needs test)
 - [ ] Get started with `npx` command
 - [ ] Publish package to npm
 

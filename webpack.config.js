@@ -10,10 +10,10 @@ module.exports = {
     app: './src/index.js',
   },
   devServer: {
+    clientLogLevel: 'silent',
     compress: true,
     watchContentBase: true,
     port: 9000,
-    clientLogLevel: 'silent',
     contentBase: path.join(__dirname, 'public'),
     open: true,
     overlay: true,

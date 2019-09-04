@@ -5,10 +5,7 @@
 package-lock.json
 
 # ignores mac file caching system or something
-.DS_Store
-
-# ingores `npm install` package-lock that is generated
-package-lock.json
+.DS_Store 
 
 # ignore build & distribution folder
 /dist
