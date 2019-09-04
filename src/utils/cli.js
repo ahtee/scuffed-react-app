@@ -5,6 +5,7 @@ const [arg] = process.argv.slice(2);
 
 const fs = require('fs');
 try {
+  console.time(`Installing new-react-app boilerplate`);
   if (arg) {
     fs.mkdir(`./${arg}`, err => {
       if (err) {
@@ -16,4 +17,6 @@ try {
   console.error(
     `Error running script! Check if your folder name already exists, choose a different folder name, or check the help command (--help, -h) for more details`
   );
+  console.trace(err);
 }
+console.timeEnd(`Installing new-react-app boilerplate`);
