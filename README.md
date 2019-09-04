@@ -36,4 +36,4 @@ Feel free to tweak as you see fit. The project has added `styled-components`, su
 
 ### MIT License
 
-See [LICENSE](./LICENSE)
+See [LICENSE](./LICENSE.md)
