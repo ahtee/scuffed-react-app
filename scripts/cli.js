@@ -1,9 +1,9 @@
 #!/usr/bin/env node
+const fs = require('fs');
 
 // pass in command line args
 const [arg] = process.argv.slice(2);
 
-const fs = require('fs');
 try {
   console.time(`Installing new-react-app boilerplate`);
   if (arg) {
