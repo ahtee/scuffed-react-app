@@ -1,4 +1,4 @@
-const todoList = (state = [], action) => {
+const todos = (state = [], action) => {
   switch (action.type) {
     case 'CREATE_TODO':
       return [
@@ -36,4 +36,4 @@ const todoList = (state = [], action) => {
   }
 };
 
-export default todoList;
+export default todos;

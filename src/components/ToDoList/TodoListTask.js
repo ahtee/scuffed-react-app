@@ -1,13 +1,13 @@
 import React from 'react';
 
-function TodoListTask({ onClick, completed, task }) {
+function TodoListTask({ text, completed, onClick }) {
   const taskStyle = {
     textDecoration: completed ? 'line-through' : 'none',
   };
 
   return (
     <li onClick={onClick} style={taskStyle}>
-      <p>{task}</p>
+      <p>{text}</p>
     </li>
   );
 }
