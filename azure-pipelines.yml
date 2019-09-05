@@ -6,6 +6,11 @@
 trigger:
 - master
 
+variables:
+  YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
+
+- script: yarn --frozen-lockfile
+
 pool:
   vmImage: 'ubuntu-latest'
 strategy:
@@ -25,5 +30,18 @@ steps:
 
 - script: |
     yarn
+  displayName: 'yarn install will install the dependencies \nYarn will run the unit tests in the project, \nand finally, yarn build will build the packages once the test results are Green.\nThen the project is ready to publish.'
+
+- task: CacheBeta@0
+  inputs:
+    key: yarn | $(Agent.OS) | yarn.lock
+    path: $(YARN_CACHE_FOLDER)
+  displayName: Cache Yarn packages
+
+- script: |
+    yarn run test
+  displayName: 'Running the Tests'
+
+- script: |
     yarn run build
-  displayName: 'yarn install and yarn build'
+  displayName: 'Tests succeeded. Performing Build step.'
