@@ -16,8 +16,6 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
 `;
 
 const HeaderText = styled.h2`
