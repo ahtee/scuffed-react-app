@@ -15,7 +15,7 @@ function Footer() {
   return (
     <Foot>
       <p>
-        <strong>MIT Licensed</strong> Software
+        new-react-app is <strong>MIT Licensed</strong> Software
       </p>
     </Foot>
   );

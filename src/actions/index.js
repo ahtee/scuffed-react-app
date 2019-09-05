@@ -1,7 +1,6 @@
 // Redux actions
 
 let todoIndex = 0;
-
 export function createTodoListTask(text) {
   return {
     type: 'CREATE_TODO',
@@ -10,7 +9,7 @@ export function createTodoListTask(text) {
   };
 }
 
-export function deleteTodoListTask() {
+export function deleteTodoListTask(index) {
   return {
     type: 'DELETE_TODO',
     index: todoIndex - 1,
