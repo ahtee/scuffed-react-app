@@ -38,7 +38,7 @@ steps:
   displayName: Cache Yarn packages
 
 - script: |
-    yarn run test
+    yarn test
   displayName: 'Running the Tests'
 
 - script: |
