@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import AddTodo from '../containers/AddTodo';
 import TodoListContainer from '../containers/TodoListContainer';
-import FilterLink from '../containers/FilterLink';
+import { Hello } from './Hello';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -35,6 +34,7 @@ const Underlined = styled.span`
 function Home() {
   return (
     <Container>
+      <Hello />
       <Row>
         <HeaderText>
           Start developing your React application with

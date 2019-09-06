@@ -9,6 +9,9 @@ module.exports = {
   entry: {
     app: './src/index.js',
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
   devServer: {
     noInfo: true,
     compress: true,
