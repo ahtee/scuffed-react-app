@@ -17,7 +17,7 @@ const buttonStyle = {
   borderColor: '#007bff',
 };
 
-function Button({ type, text, onClick }) {
+function Button({ type, text, onClick, children }) {
   return (
     <button type={type} style={buttonStyle} onClick={onClick}>
       {text ? text : children}

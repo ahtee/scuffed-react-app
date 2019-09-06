@@ -1,10 +1,19 @@
-const todos = (state = [], action) => {
+const todos = (
+  state = [
+    {
+      index: 1,
+      text: 'New Todo',
+      completed: false,
+    },
+  ],
+  action
+) => {
   switch (action.type) {
     case 'CREATE_TODO':
       return [
         ...state,
         {
-          index: action.index,
+          index: action.todoIndex,
           text: action.text,
           completed: false,
         },
@@ -13,7 +22,7 @@ const todos = (state = [], action) => {
       return [
         ...state,
         {
-          index: action.index,
+          index: action.todoIndex,
           completed: true,
         },
       ];
@@ -21,7 +30,7 @@ const todos = (state = [], action) => {
       return [
         ...state,
         {
-          index: action.index,
+          index: action.todoIndex,
           text: action.text,
         },
       ];
