@@ -18,9 +18,14 @@ const Row = styled.div`
   flex-direction: row;
 `;
 
+const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const HeaderText = styled.h2`
   text-align: center;
-  margin: 0px 30px;
+  margin: 0px 30px 20px 30px;
 `;
 
 const Underlined = styled.span`
@@ -37,9 +42,9 @@ function Home() {
         </HeaderText>
       </Row>
       <Row>
-        <AddTodo />
-        <TodoListContainer />
-        <FilterLink />
+        <Column>
+          <TodoListContainer />
+        </Column>
       </Row>
     </Container>
   );

@@ -1,13 +1,11 @@
 import React from 'react';
+import Button from './Button';
 
 function Link({ active, children, onClick }) {
-  const linkStyle = {
-    marginLeft: 10,
-  };
   return (
-    <button onClick={onClick} disabled={active} style={linkStyle}>
+    <Button onClick={onClick} disabled={active}>
       {children}
-    </button>
+    </Button>
   );
 }
 export default Link;

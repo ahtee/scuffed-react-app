@@ -10,13 +10,17 @@ module.exports = {
     app: './src/index.js',
   },
   devServer: {
-    clientLogLevel: 'silent',
+    noInfo: true,
     compress: true,
-    watchContentBase: true,
-    port: 9000,
-    contentBase: path.join(__dirname, 'public'),
+    port: 3000,
     open: true,
-    overlay: true,
+    contentBase: path.join(__dirname, 'public'),
+    watchContentBase: true,
+    overlay: {
+      warnings: true,
+      errors: true,
+    },
+    liveReload: true,
     stats: {
       colors: true,
     },
@@ -24,6 +28,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: devMode ? '[name].bundle.js' : '[name]-[hash].bundle.js',
+    chunkFilename: devMode ? '[name].chunk.js' : '[name]-[hash].chunk.js',
   },
   module: {
     rules: [
@@ -69,8 +74,8 @@ module.exports = {
       filename: 'index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: devMode ? '[name].css' : '[name].[hash].css',
-      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+      filename: devMode ? '[name].css' : '[name]-[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id]-[hash].css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
   ],
