@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import TodoListContainer from '../containers/TodoListContainer';
-import { Hello } from './Hello';
+import TodoListTask from '../components/ToDoList/TodoListTask';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -34,7 +34,6 @@ const Underlined = styled.span`
 function Home() {
   return (
     <Container>
-      <Hello />
       <Row>
         <HeaderText>
           Start developing your React application with
@@ -43,7 +42,8 @@ function Home() {
       </Row>
       <Row>
         <Column>
-          <TodoListContainer />
+          {/* <TodoListContainer /> */}
+          <TodoListTask />
         </Column>
       </Row>
     </Container>

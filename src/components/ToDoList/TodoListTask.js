@@ -1,9 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import propTypes from 'prop-types';
 import FilterLink from '../../containers/FilterLink';
 
-function TodoListTask({ text, completed, onClick }) {
+function TodoListTask(props) {
   const taskStyle = {
-    textDecoration: completed ? 'line-through' : 'none',
     border: '2px solid green',
     padding: 5,
     borderRadius: 10,
@@ -12,11 +13,20 @@ function TodoListTask({ text, completed, onClick }) {
     background: 'yellow',
   };
 
+  const todo = useSelector(state => state.todos[props.todoIndex]);
+
   return (
-    <li onClick={onClick} style={taskStyle}>
-      <p>{text}</p>
+    <li style={taskStyle} disabled={props.completed}>
+      <p>{todo.text}</p>
       <FilterLink />
     </li>
   );
 }
+
+TodoListTask.propTypes = {
+  todoIndex: propTypes.number,
+  text: propTypes.string,
+  completed: propTypes.bool,
+};
+
 export default TodoListTask;

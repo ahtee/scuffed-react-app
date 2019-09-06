@@ -5,6 +5,6 @@
   "rules": {},
   "rulesDirectory": [],
   "linterOptions": {
-    "exclude": ["config/**/*.js", "node_modules/**/*.ts"]
+    "exclude": ["scripts/**/*.js", "node_modules/**/*.ts"]
   }
 }
