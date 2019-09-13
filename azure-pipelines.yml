@@ -37,9 +37,10 @@ steps:
     path: $(YARN_CACHE_FOLDER)
   displayName: Cache Yarn packages
 
-- script: |
-    yarn test
-  displayName: 'Running the Tests'
+# TODO add tests
+# - script: |
+#     yarn test
+#   displayName: 'Running the Tests'
 
 - script: |
     yarn run build
