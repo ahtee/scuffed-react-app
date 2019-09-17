@@ -30,6 +30,9 @@ module.exports = {
     filename: devMode ? '[name].bundle.js' : '[name]-[hash].bundle.js',
     chunkFilename: devMode ? '[name].chunk.js' : '[name]-[hash].chunk.js',
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+  },
   module: {
     rules: [
       {

@@ -1,16 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import rootReducer from './reducers';
 import App from './App';
-
-// Initiaize the global State with Redux createStore
-const store = createStore(rootReducer);
+import Home from './components/Home';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <App>
+    <Home />
+  </App>,
   document.getElementById('root')
 );

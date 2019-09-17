@@ -1,8 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import AddTodo from '../containers/AddTodo';
-import TodoListContainer from '../containers/TodoListContainer';
-import FilterLink from '../containers/FilterLink';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -16,11 +13,6 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-`;
-
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
 `;
 
 const HeaderText = styled.h2`
@@ -40,11 +32,6 @@ function Home() {
           Start developing your React application with
           <Underlined> stress</Underlined>.
         </HeaderText>
-      </Row>
-      <Row>
-        <Column>
-          <TodoListContainer />
-        </Column>
       </Row>
     </Container>
   );
