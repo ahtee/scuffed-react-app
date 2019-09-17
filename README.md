@@ -1,6 +1,6 @@
 [![Build Status](https://bencotte.visualstudio.com/new-react-app/_apis/build/status/ahtee.new-react-app?branchName=master)](https://bencotte.visualstudio.com/new-react-app/_build/latest?definitionId=1&branchName=master)
 
-# [new-react-app](https://www.github.com/ahtee/new-react-app)
+# [scuffed-react-app](https://www.github.com/ahtee/scuffed-react-app)
 
 > :rocket: Start developing your React application with stress. :nail_care:
 
@@ -14,10 +14,10 @@ Boilerplate package for creating React apps with Redux built-in. :ship: **npm@5.
 - Run `yarn start` to run the `webpack-dev-server`
 - Get Hacking!
 
-### Create a `new-react-app` project with `npx`
+### Create a `scuffed-react-app` project with `npx`
 
 ```sh
-npx new-react-app my-stressful-app
+npx scuffed-react-app my-stressful-app
 ```
 
 ## Goals
