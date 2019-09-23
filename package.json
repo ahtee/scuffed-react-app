@@ -52,6 +52,6 @@
     "styled-components": "^4.3.2"
   },
   "bin": {
-    "new-react-app": "./scripts/cli.js"
+    "new-react-app": "./scripts/npx.js"
   }
 }
