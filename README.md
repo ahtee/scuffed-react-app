@@ -27,8 +27,7 @@ This project is intended to be a boilerplate for React, CSS-in-JS, and Redux. Mo
 I want to be able to create a scalable React project that includes most popular, cutting-edge tools without the hassle of setting them up every time. The only outlying task would be to connect to a database.
 
 - [x] React
-- [x] Redux
-- [ ] TypeScript compatibility (needs test)
+- [ ] TypeScript compatibility
 - [ ] Get started with `npx` command
 - [ ] Publish package to npm
 
