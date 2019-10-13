@@ -1,16 +1,7 @@
 {
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "sourceType": "module",
-    "allowImportExportEverywhere": false,
-    "ecmaFeatures": {
-      "globalReturn": false
-    },
-    "babelOptions": {
-      "configFile": "./babelrc"
-    }
-  },
-  "extends": "react",
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": "./tsconfig.json",
   "env": {
     "browser": true,
     "node": true
@@ -19,5 +10,6 @@
     "react": {
       "version": "detect"
     }
-  }
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts", "typings/**/*.ts", "src/**/*.js"]
 }
