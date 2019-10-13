@@ -14,12 +14,6 @@ Boilerplate package for creating React apps with Redux built-in. :ship: **npm@5.
 - Run `yarn start` to run the `webpack-dev-server`
 - Get Hacking!
 
-### Create a `scuffed-react-app` project with `npx`
-
-```sh
-npx scuffed-react-app my-stressful-app
-```
-
 ## Goals
 
 This project is intended to be a boilerplate for React, CSS-in-JS, and Redux. Most boilerplates today are extremely lean and rely on the developer to correctly setup and install all the modules and store. The goal is to have a good starting point for larger applications requiring a `store`, or central-state-management tool like Redux.
@@ -33,7 +27,9 @@ I want to be able to create a scalable React project that includes most popular,
 
 ## Notes
 
-Feel free to tweak as you see fit. The project has added `styled-components`, supports **TypeScript**. To remove them from your project, just type `yarn remove styled-components react-spring` to uninstall these modules.
+> Feel free to tweak as you see fit. The project has added `styled-components`, supports **TypeScript**. To remove them from your project, just type `yarn remove styled-components react-spring` to uninstall these modules.
+
+> Typescript files are denotes as `.ts` **NOT** `.tsx` files.
 
 ### MIT License
 
