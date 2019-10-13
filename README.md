@@ -27,7 +27,7 @@ I want to be able to create a scalable React project that includes most popular,
 
 ## Notes
 
-> Feel free to tweak as you see fit. The project has added `styled-components`, supports **TypeScript**. To remove them from your project, just type `yarn remove styled-components react-spring` to uninstall these modules.
+> Feel free to tweak as you see fit. The project supports **TypeScript**. To remove them from your project, just type `yarn remove typescript @types/react @types/react-dom @typescript-eslint/eslint-plugin @typescript-eslint/parser ts-loader` to uninstall these modules. Don't forget to remove `tsconfig.json` and add **"parserOptions"** in your `.eslintrc`. If you need eslint, install the package with yarn `yarn add -D babel-eslint` and add it as the value in `.eslint`'s **"parser"** property.
 
 > Typescript files are denotes as `.ts` **NOT** `.tsx` files.
 
