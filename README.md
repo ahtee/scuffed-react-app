@@ -1,4 +1,4 @@
-[![Build Status](https://bencotte.visualstudio.com/new-react-app/_apis/build/status/ahtee.new-react-app?branchName=master)](https://bencotte.visualstudio.com/new-react-app/_build/latest?definitionId=1&branchName=master)
+[![Build Status](https://bencotte.visualstudio.com/new-react-app/_apis/build/status/ahtee.scuffed-react-app?branchName=master)](https://bencotte.visualstudio.com/new-react-app/_build/latest?definitionId=2&branchName=master)
 
 # [scuffed-react-app](https://www.github.com/ahtee/scuffed-react-app)
 
