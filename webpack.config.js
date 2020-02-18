@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  name: 'new-react-app',
+  name: 'scuffed-react-app',
   entry: {
     app: './src/index.js',
   },
